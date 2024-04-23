@@ -1,0 +1,13 @@
+{
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+  }
+}
