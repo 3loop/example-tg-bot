@@ -20,18 +20,10 @@ const abiStore = {
     }),
     FourByteStrategyResolver(),
   ],
-  get: async (req: {
-    chainID: number;
-    address: string;
-    event?: string | undefined;
-    signature?: string | undefined;
-  }) => {
+  get: async (req: { address: string }) => {
     return Promise.resolve(abiCache.get(req.address.toLowerCase()) ?? null);
   },
-  set: async (req: {
-    address?: Record<string, string>;
-    signature?: Record<string, string>;
-  }) => {
+  set: async (req: { address?: Record<string, string> }) => {
     const addresses = Object.keys(req.address ?? {});
 
     addresses.forEach((address) => {
